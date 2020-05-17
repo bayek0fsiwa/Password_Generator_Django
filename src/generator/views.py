@@ -10,6 +10,9 @@ def home(request):
 def about(request):
     return render(request, 'generate/about.html')
 
+def privacypolicy(request):
+    return render(request, 'generate/privacypolicy.html')
+
 def password(request):
     characters = list('abcdefghijklmnopqrstuvwxyz')
     if request.GET.get('uppercase'):

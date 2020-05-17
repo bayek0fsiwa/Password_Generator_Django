@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+
+{% block title %} Password Generator {% endblock title %}
+{% block homeactive %} active {% endblock homeactive %}
+{% block body %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+</head>
+
+<body>
+    <div class="container text-center">
+
+</html>
+<h2>Generate Your Secure Password🔑</h2>
+<form action="{% url 'password' %}">
+    <select name="length">
+        <option value="8" selected="selected">8</option>
+        <option value="10">10</option>
+        <option value="12">12</option>
+        <option value="14">14</option>
+    </select>
+    <br>
+    <input type="checkbox" id="gridCheck1" name="uppercase"> UPPERCASE+lowercase
+    <!-- <br>
+            <input type="checkbox" name="lowercase"> lowercase -->
+    <br>
+    <input type="checkbox" id="gridCheck2" name="numbers"> Numbers
+    <br>
+    <input type="checkbox" id="gridCheck3" name="special"> special characters
+    <br>
+    <br>
+    <input class="btn btn-success btn-lg" type="submit" value="Generate Password">
+</form>
+</div>
+</body>
+{% endblock body %}
